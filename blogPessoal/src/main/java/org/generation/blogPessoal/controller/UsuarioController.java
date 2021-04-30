@@ -29,16 +29,12 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
-		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);
+	public ResponseEntity<Long> Post(@RequestBody Usuario usuario){
+		Usuario user = usuarioService.CadastrarUsuario(usuario);
 		try {
-			return ResponseEntity.ok(user.get());
+			return ResponseEntity.ok(user.getId());
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().build();
 		}
 	}
-	/*/@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.CadastrarUsuario(usuario));
-	}*/
 }

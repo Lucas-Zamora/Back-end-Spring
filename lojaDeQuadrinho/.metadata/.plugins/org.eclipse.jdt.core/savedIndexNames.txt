@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\lucas\OneDrive\Ambiente de Trabalho\Atividades Generation\lojaDeQuadrinho\.metadata\.plugins\org.eclipse.jdt.core
